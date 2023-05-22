@@ -1,0 +1,33 @@
+﻿<Application x:Class="CuratorsHelper.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CuratorsHelper"
+             StartupUri="View/MainWindow.xaml">
+
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml" />
+                <ResourceDictionary Source="ButtonShadow.xaml" />
+                <ResourceDictionary Source="RichTextBoxResourses.xaml" />
+                <ResourceDictionary Source="TextBoxInput.xaml" />
+                <ResourceDictionary Source="NewButton.xaml" />
+                <ResourceDictionary Source="NewCheckBox.xaml" />
+                <ResourceDictionary Source="NewComboBox.xaml" />
+                <ResourceDictionary Source="ListViewItemsStyle.xaml" />
+                <ResourceDictionary Source="NewDatePicker.xaml" />
+                <ResourceDictionary Source="RichTextBoxDefault.xaml" />
+                <ResourceDictionary Source="DateTextPicker.xaml" />
+                <ResourceDictionary Source="DatePickerButton.xaml" />
+                <ResourceDictionary Source="CalendarStyles/CalendarStyle.xaml" />
+                <ResourceDictionary Source="CalendarStyles/newCalendarButton.xaml" />
+                <ResourceDictionary Source="CalendarStyles/newCalendarDayButton.xaml" />
+                <ResourceDictionary Source="CalendarStyles/newCalendarItem.xaml" />
+                <ResourceDictionary Source="CalendarStyles/newFocusVisual.xaml" />
+                <ResourceDictionary Source="DatePickerStudent.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

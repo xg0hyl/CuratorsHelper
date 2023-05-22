@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ae76106d1bb74850927251503ffe6386" Name="Diagram1" ZoomLevel="66">
+        <EntityTypeShape EntityType="CuratorsHelperModel.Brothers_sisters" Width="1.5" PointX="14.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Curators" Width="1.5" PointX="7.5" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.cyclics" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Groups" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Hobbies" Width="1.5" PointX="17.125" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Hostel" Width="1.5" PointX="16.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Mounth" Width="1.5" PointX="9.5" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Parents" Width="1.5" PointX="19" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Passport" Width="1.5" PointX="13.375" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Plan_work" Width="1.5" PointX="9.875" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Report" Width="1.5" PointX="7.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.roles" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.rukovodstvo" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.student" Width="1.5" PointX="11.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Type_plan_work" Width="1.5" PointX="9.625" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Works_parent" Width="1.5" PointX="15.125" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Works_student" Width="1.5" PointX="18.875" PointY="10.5" IsExpanded="true" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Brothers_sisters_student" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Curators_cyclics" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Curators_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Groups_rukovodstvo" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Plan_work_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Report_Groups" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_student_Groups" ManuallyRouted="false" />
+        <AssociationConnector ManuallyRouted="false" Association="CuratorsHelperModel.FK_Hostel_student" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Plan_work_Mounth" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Report_Mounth" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Parents_student" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Passport_student" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Plan_work_Type_plan_work" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_rukovodstvo_roles" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Works_parent_student" ManuallyRouted="false" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Works_student_student" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Achivment_student" Width="1.5" PointX="19.125" PointY="13.125" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Facts_assotial" Width="1.5" PointX="17.125" PointY="10.625" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Passwords" Width="1.5" PointX="3.125" PointY="11.75" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Achivment_student_student" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Facts_assotial_student" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.Student_Hobbies" Width="1.5" PointX="15.25" PointY="13.75" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Student_Hobbies_Hobbies" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Student_Hobbies_student" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_Curators_Passwords" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_rukovodstvo_Passwords" />
+        <EntityTypeShape EntityType="CuratorsHelperModel.WebSites" Width="1.5" PointX="9.75" PointY="8.25" />
+        <AssociationConnector Association="CuratorsHelperModel.FK_WebSites_Curators" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

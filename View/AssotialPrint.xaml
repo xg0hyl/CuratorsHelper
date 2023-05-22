@@ -1,0 +1,351 @@
+﻿<Window x:Class="CuratorsHelper.View.AssotialPrint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuratorsHelper.View"
+        mc:Ignorable="d"
+          Title="CuratorsHelper" 
+        Height="900"
+        Width="1440" 
+        WindowState="Maximized" 
+        Background="#E7E7E7"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Image x:Key="closeApp" Source="/images/close.png"/>
+        <Style TargetType="Button" x:Key="menuStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                                    x:Name="border" 
+                                    CornerRadius="50"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    ClipToBounds="True" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Background="{TemplateBinding Background}" 
+                                    SnapsToDevicePixels="true">
+
+                            <ContentPresenter 
+                                        x:Name="contentPresenter" 
+                                        Focusable="False" 
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}" 
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="BorderThickness" TargetName="border" Value="0.5"/>
+                                <Setter Property="Margin" TargetName="border" Value="0.5"/>
+                                <Setter Property="BorderBrush" 
+                                                TargetName="border" 
+                                                Value="#CCAD0000"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FF1B1B1B"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#CCAD0000"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.039*"/>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#7196B9" Grid.Row="0"/>
+
+        <Grid Background="#222" Grid.Row="0"/>
+
+        <TextBlock
+            Text="CuratorsHelper"
+            HorizontalAlignment="Left"
+            Foreground="White"
+            VerticalAlignment="Center"
+            FontSize="20"
+            Margin="10 0 0 0"/>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+
+            <Button  
+                Click="collapseWindow_Click"
+            Name="collapseWindow"
+            Content="___"
+            Foreground="#888888"  
+            Margin="0 0 5 0"
+            Width="20" Height="20"
+            HorizontalAlignment="Right"
+            Background="#222"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Style="{StaticResource menuStyle}">
+
+            </Button>
+
+
+            <Button 
+                Click="closeWindow_Click"
+            Name="closeWindow"
+            Content="╳"
+            Foreground="#888888"  
+            Width="20" Height="20"
+            Background="#222"
+            HorizontalAlignment="Right"
+            BorderThickness="0"
+                Style="{StaticResource menuStyle}">
+
+            </Button>
+
+
+        </StackPanel>
+
+
+        <Grid Background="#CDCDCD" Grid.Row="1"/>
+
+        <Image
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Width="85"
+            Margin="15 0 0 0"
+            Source="/images/BackBtn.png">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <EventSetter Event="MouseDown" Handler="Image_MouseDown"/>
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 10 0">
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <EventSetter Event="MouseDown" Handler="StackPanel_MouseDown"/>
+                </Style>
+            </StackPanel.Style>
+
+            <Image
+                Width="60"
+                Source="/images/bxs_exit.png"/>
+
+            <TextBlock
+                Text="Выход"
+                Foreground="#222"
+                FontSize="28"
+                FontFamily="Inter"/>
+
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+
+            <DocumentViewer
+                Name="docView">
+                <DocumentViewer.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Copy" Command="Copy" />
+                    </ContextMenu>
+                </DocumentViewer.ContextMenu>
+                <FixedDocument
+                    IsEnabled="False">
+                    <PageContent>
+                        <FixedPage>
+                            <Grid HorizontalAlignment="Center">
+                                <StackPanel>
+
+                                    <!--Факт ассоц студента начало-->
+
+                                    <TextBlock
+                                            Margin="10 0 0 0"
+                                        Text="Таблица факта ассоциального поведения учащегося: "
+                                        FontSize="18"
+                                        HorizontalAlignment="Center"
+                                        Name="TitleText"
+                                        FontFamily="Times New Roman"/>
+
+                                    <WrapPanel
+                                        Grid.Row="0"
+                                        Orientation="Horizontal">
+
+                                        <Border
+                                          BorderBrush="Black" 
+                                          BorderThickness="2,2,0,2"
+                                            Height="59">
+
+                                            <TextBlock
+                                                Text="Дата"
+                                                Foreground="Black"
+                                                FontSize="26"
+                                                TextAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Times New Roman"
+                                                Width="150"/>
+
+                                        </Border>
+
+
+                                        <Border
+                                          BorderBrush="Black" 
+                                          BorderThickness="2,2,0,2"
+                                            Height="59">
+
+                                            <TextBlock
+                                                Text="Характер проявления"
+                                                Foreground="Black"
+                                                FontSize="26"
+                                                TextAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Times New Roman"
+                                                Width="250"/>
+
+                                        </Border>
+
+                                        <Border
+                                          BorderBrush="Black" 
+                                          BorderThickness="2, 2, 0, 2"
+                                            Height="59">
+
+                                            <TextBlock
+                                                Text="Меры"
+                                                Foreground="Black"
+                                                FontSize="26"
+                                                TextAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Times New Roman"
+                                                Width="200"/>
+
+                                        </Border>
+
+                                        <Border
+                                              BorderBrush="Black" 
+                                              BorderThickness="2"
+                                                Height="59">
+
+                                            <TextBlock
+                                                Text="Результат"
+                                                Foreground="Black"
+                                                FontSize="26"
+                                                TextAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                FontFamily="Times New Roman"
+                                                Width="218"/>
+
+                                        </Border>
+
+                                    </WrapPanel>
+
+
+                                    <Border BorderBrush="Black"
+                                        BorderThickness="2,0,2,2"
+                                        Grid.Row="1">
+
+                                        <ListView 
+                                            Background="Transparent"
+                                            Name="AssotialList">
+
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+
+                                                    <StackPanel
+                                                         Orientation="Horizontal">
+
+                                                        <Border
+                                                            BorderBrush="Black"
+                                                            BorderThickness="2,2,0,2">
+
+                                                            <TextBlock
+                                                                Text="{Binding date, StringFormat=yyyy.MM.dd}"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                TextAlignment="Center"
+                                                                FontSize="18"
+                                                                FontFamily="Times New Roman"
+                                                                Width="140"/>
+
+                                                        </Border>
+
+                                                        <Border
+                                                            BorderBrush="Black"
+                                                            BorderThickness="2,2,0,2">
+
+                                                            <TextBlock
+                                                                Text="{Binding character}"
+                                                                TextWrapping="Wrap"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                TextAlignment="Center"
+                                                                FontSize="18"
+                                                                Width="250"/>
+
+                                                        </Border>
+
+                                                        <Border
+                                                            BorderBrush="Black"
+                                                            BorderThickness="2,2,0,2">
+
+                                                            <TextBlock
+                                                                Text="{Binding measures}"
+                                                                TextWrapping="Wrap"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                TextAlignment="Center"
+                                                                FontSize="18"
+                                                                Width="200"/>
+
+                                                        </Border>
+
+                                                        <Border
+                                                            BorderBrush="Black"
+                                                            BorderThickness="2">
+
+                                                            <TextBlock
+                                                                Text="{Binding result}"
+                                                                TextWrapping="Wrap"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center"
+                                                                TextAlignment="Center"
+                                                                FontSize="18"
+                                                                Width="190"/>
+
+                                                        </Border>
+
+
+                                                    </StackPanel>
+
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+
+                                        </ListView>
+
+                                    </Border>
+
+                                    <!--Факт ассоц студента конец-->
+
+                                </StackPanel>
+                            </Grid>
+                        </FixedPage>
+                    </PageContent>
+                </FixedDocument>
+            </DocumentViewer>
+
+        </Grid>
+
+    </Grid>
+</Window>

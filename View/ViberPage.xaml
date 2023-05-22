@@ -1,0 +1,1436 @@
+﻿<Page x:Class="CuratorsHelper.ViberPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CuratorsHelper"
+      xmlns:helpers="clr-namespace:CuratorsHelper"
+      mc:Ignorable="d" 
+      d:DesignHeight="970" d:DesignWidth="1060"
+      Title="ViberPage" >
+    <Page.Resources>
+        <helpers:ConverterImage x:Key="ConverterImage"/>
+        <CollectionViewSource 
+            x:Key="MounthContext"
+            d:DesignSource="{d:DesignInstance 
+            {x:Type local:Mounth}, 
+            CreateList=True}"/>
+    </Page.Resources>
+    <Grid Margin="5">
+        
+        <StackPanel
+            Visibility="Visible"
+            Name="Buttons"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Width="500">
+
+
+            <Button
+            VerticalAlignment="Center"
+            Grid.Column="0"
+            Content="План"
+            FontSize="30"
+            Height="50"
+            Style="{StaticResource ButtonStyle2}"
+            Name="CuratorsBtn"
+                Click="CuratorsBtn_Click"
+            Margin="5"/>
+
+            <Button
+            VerticalAlignment="Center"
+            Grid.Column="0"
+            Content="Учащиеся"
+            FontSize="30"
+            Height="50"
+            Style="{StaticResource ButtonStyle2}"
+            Name="studentsBtn"
+            Click="studentsBtn_Click"
+            Margin="5"/>
+
+
+        <Button
+            VerticalAlignment="Center"
+            Grid.Column="0"
+            Content="Настроить полезные ссылки"
+            FontSize="30"
+            Height="50"
+            Style="{StaticResource ButtonStyle2}"
+            Name="SitesBtn"
+            Click="SitesBtn_Click"
+            Margin="5"/>
+            
+        </StackPanel>
+
+        <!--student-->
+        <Grid
+            Name="StudentsGrid"
+            Visibility="Hidden">
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border 
+                Grid.Row="0"
+                BorderBrush="#222"
+                BorderThickness="0 0 0 2"/>
+
+            <Image
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Width="85"
+            Margin="15 0 0 0"
+            Source="/images/BackBtn.png">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <EventSetter Event="MouseDown" Handler="Image_MouseDown"/>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <Image
+                Name="AddStudent"
+                Grid.Row="0"
+                HorizontalAlignment="Right"
+                Width="45"
+                Margin="0 0 15 0"
+                Source="/images/icon-add.png">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <EventSetter Event="MouseDown" Handler="Image_MouseDown_1"/>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+
+            <StackPanel 
+                Orientation="Horizontal"
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+                <ComboBox
+                    Name="GroupsCombo"
+                    Style="{DynamicResource ComboBoxStyle1}"
+                    FontSize="34"
+                    Width="300"
+                    Margin="10 0 0 0"
+                    BorderThickness="0 0 0 2"
+                    DisplayMemberPath="name"
+                    VerticalContentAlignment="Bottom"
+                    HorizontalContentAlignment="Center"
+                    SelectedValuePath="id_group"
+                    SelectionChanged="GroupsCombo_SelectionChanged"/>
+
+            </StackPanel>
+
+
+
+            <ScrollViewer
+                Grid.Row="1">
+                
+                <ItemsControl
+                Name="StudentView"
+                Background="Transparent"
+                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Orientation="Horizontal"
+                                       HorizontalAlignment="Center"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+
+                            <StackPanel
+                            Width="230"
+                            Margin="50 0 0 10">
+
+
+                                <TextBlock
+                                Text="{Binding FIO}"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                FontFamily="Times New Roman"
+                                HorizontalAlignment="Center"
+                                TextAlignment="Center"
+                                TextWrapping="Wrap"/>
+
+                                <Viewbox
+                                Stretch="Uniform"
+                                Width="200"
+                                Height="200"
+                                Margin="0 7 0 7">
+
+                                    <Image
+                                    Source="{Binding photo, Converter={StaticResource ConverterImage}}"/>
+
+                                </Viewbox>
+
+                                <TextBlock
+                                Text="{Binding phone}"
+                                FontSize="20"
+                                FontFamily="Times New Roman"
+                                HorizontalAlignment="Center"/>
+
+                                <TextBlock
+                                Text="Подробнее..."
+                                FontSize="20"
+                                FontFamily="Times New Roman"
+                                HorizontalAlignment="Center"
+                                FontWeight="ExtraBold"
+                                Name="ShowMoreText"
+                                Visibility="{Binding Groups.vis}"
+                                MouseDown="TextBlock_MouseDown">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <Trigger Property="IsMouseOver" Value="True">
+                                                    <Setter Property="Cursor" Value="Hand"/>
+                                                    <Setter Property="Foreground" Value="#555"/>
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+
+                            </StackPanel>
+
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+            </ScrollViewer>
+
+            <Popup
+                Name="AddStudentPopup"
+                IsOpen="False"
+                Width="900"
+                Height="550"
+                Placement="Center">
+                <Border
+                    Background="#E7E7E7"
+                    BorderBrush="Black"
+                    BorderThickness="2">
+
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.1*"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+
+                        <Image
+                            Name="SaveStudent"
+                            Grid.Row="0"
+                            HorizontalAlignment="Right"
+                            Width="30"
+                            Margin="0 0 25 0"
+                            Source="/images/icon-add.png">     
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <EventSetter Event="MouseDown" Handler="Image_MouseDown_3"/>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+
+                        <Image
+                            Grid.Row="0"
+                            HorizontalAlignment="Left"
+                            Width="85"
+                            Margin="15 0 0 0"
+                            Source="/images/BackBtn.png">      
+                            <Image.Style>
+                                <Style TargetType="Image">
+                                    <EventSetter Event="MouseDown" Handler="Image_MouseDown_2"/>
+                                </Style>
+                            </Image.Style>
+                        </Image>
+
+                        <TextBlock
+                            Text="Добавить учащегося"
+                            FontSize="30"
+                            FontFamily="Times New Roman"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"/>
+
+
+                        <Grid
+                            Grid.Row="1"
+                            Margin="0 0 0 20"
+                            Name="StudentAddGrid">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+
+
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Width="90"
+                                Source="nonePhoto.png"
+                                MouseUp="StudentPhoto_MouseUp"
+                                Name="StudentPhoto"/>
+
+
+                            <TextBlock
+                                Text="*Заполните все поля"
+                                Foreground="Red"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Visibility="Hidden"
+                                Name="WarningStudentText"/>
+
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Text="ФИО"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="FioStText"/>
+
+                            
+                            
+                            <TextBlock
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Text="Дата рождения"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <DatePicker
+                                Grid.Column="0"
+                                Grid.Row="2"
+                                Style="{StaticResource DatePickerStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="DateStText"/>
+
+
+
+                            <TextBlock
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Text="Адрес"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="AdresStText"/>
+
+
+
+                            <TextBlock
+                                Grid.Row="4"
+                                Grid.Column="0"
+                                Text="Школа"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="0"
+                                Grid.Row="4"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="SchoolStText"/>
+
+                            
+                            
+                            <TextBlock
+                                Grid.Row="5"
+                                Grid.Column="0"
+                                Text="Гражданство"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="0"
+                                Grid.Row="5"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="NationalStText"/>
+
+                            
+
+                            <TextBlock
+                                Grid.Row="6"
+                                Grid.Column="0"
+                                Text="Телефон"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="0"
+                                Grid.Row="6"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="PhoneStText"
+                                PreviewTextInput="PhoneStText_PreviewTextInput"
+                                TextChanged="PhoneStText_TextChanged"/>
+
+
+
+                            <TextBlock
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                Text="Состояние здоровья"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="HealthStText"/>
+
+
+
+
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="Отношения с семьей"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="1"
+                                Grid.Row="1"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="ReletionshipStText"/>
+
+
+
+                            <TextBlock
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Text="Общежитие"
+                                FontSize="20"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"/>
+
+                            <TextBox
+                                Grid.Column="1"
+                                Grid.Row="2"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                PreviewTextInput="RoomStText_PreviewTextInput"
+                                Name="RoomStText"/>
+
+
+
+
+                            <TextBlock
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Text="Увлечения"
+                                FontSize="20"/>
+
+                            <TextBox
+                                Grid.Column="1"
+                                Grid.Row="3"
+                                Style="{StaticResource TextBoxStyle1}"
+                                FontSize="20"
+                                VerticalAlignment="Bottom"
+                                Width="340"
+                                Name="HobbiesText"/>
+
+
+
+                            <StackPanel
+                                Grid.Row="5"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Orientation="Horizontal">
+
+                                <TextBlock
+                                    Text="Родителей:"
+                                    FontSize="16"/>
+
+                                <TextBlock
+                                    Name="CountParentSt"
+                                    Text="0"
+                                    FontSize="16"/>
+                                
+                            </StackPanel>
+
+                            <Button
+                                Grid.Row="5"
+                                Grid.Column="1"
+                                Content="Добавить родителя"
+                                Style="{StaticResource ButtonStyle2}"
+                                FontSize="20"
+                                Width="340"
+                                Height="40"
+                                VerticalAlignment="Bottom"
+                                Name="AddParentStBtn"
+                                Click="AddParentStBtn_Click"/>
+
+                            
+                            
+                            
+                            <!--Parent-->
+                            <Popup
+                                Name="ParentPopup"
+                                IsOpen="False"
+                                Width="350"
+                                Height="450"
+                                Placement="Center">
+
+                                <Border
+                                    BorderBrush="Black"
+                                    BorderThickness="2"
+                                    Background="#E7E7E7">
+
+                                    <Grid
+                                        x:Name="AddParentGrid"
+                                        HorizontalAlignment="Center"
+                                        Width="250">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+
+
+                                        <ComboBox
+                                            Grid.Row="0"
+                                            FontSize="20"
+                                            BorderThickness="0 0 0 2"
+                                            Name="ParentCombo"
+                                            HorizontalAlignment="Center"
+                                            HorizontalContentAlignment="Center"
+                                            Width="250"
+                                            VerticalContentAlignment="Bottom"
+                                            Style="{StaticResource ComboBoxStyle1}"/>
+
+
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="ФИО"/>
+
+                                        <TextBox
+                                            Grid.Row="1"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="FioParText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+
+
+                                        <TextBlock
+                                            Grid.Row="2"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Адрес"/>
+
+                                        <TextBox
+                                            Grid.Row="2"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="AdresParText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+
+
+                                        <TextBlock
+                                            Grid.Row="3"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Телефон"/>
+
+                                        <TextBox
+                                            Grid.Row="3"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="PhoneParText"
+                                            PreviewTextInput="PhoneStText_PreviewTextInput"
+                                            TextChanged="PhoneStText_TextChanged"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+
+                                        
+                                        <TextBlock
+                                            Grid.Row="4"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Место работы"/>
+
+                                        <TextBox
+                                            Grid.Row="4"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="JobPlaceParText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+
+
+                                        <TextBlock
+                                            Grid.Row="5"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Должность"/>
+
+                                        <TextBox
+                                            Grid.Row="5"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="JobParText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+
+
+                                        <TextBlock
+                                            Grid.Row="6"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Дата рождения"/>
+
+                                        <DatePicker
+                                            Grid.Row="6"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="DateBornParText"
+                                            Style="{StaticResource DatePickerStyle1}"/>
+
+
+
+                                        <Button
+                                            Grid.Row="7"
+                                            Content="Добавить"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Left"
+                                            FontSize="16"
+                                            Name="SaveParentBtn"
+                                            Click="SaveParentBtn_Click"/>
+
+
+                                        <Button
+                                            Grid.Row="7"
+                                            Content="Отмена"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Right"
+                                            FontSize="16"
+                                            Name="CancelParentBtn"
+                                            Click="CancelParentBtn_Click"/>
+
+
+                                        <TextBlock
+                                            Grid.Row="8"
+                                            Text="*Заполните все поля"
+                                            HorizontalAlignment="Center"
+                                            Foreground="Red"
+                                            Visibility="Hidden"
+                                            Name="WarningParentText"/>
+
+                                    </Grid>
+
+                                </Border>
+                                
+                            </Popup>
+
+
+
+                            <StackPanel
+                                Grid.Row="6"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Orientation="Horizontal">
+
+                                <TextBlock
+                                    Text="Других членов семьи:"
+                                    FontSize="16"/>
+
+                                <TextBlock
+                                    Name="CountOtherSt"
+                                    Text="0"
+                                    FontSize="16"/>
+
+                            </StackPanel>
+
+                            <Button
+                                Grid.Row="6"
+                                Grid.Column="1"
+                                Content="Добавить другого члена семьи"
+                                Style="{StaticResource ButtonStyle2}"
+                                FontSize="20"
+                                Width="340"
+                                Height="40"
+                                VerticalAlignment="Bottom"
+                                Name="AddOtherStBtn"
+                                Click="AddOtherStBtn_Click"/>
+
+                            
+                            <!--Другие члены семьи-->
+
+                            <Popup
+                                Name="OtherPopup"
+                                IsOpen="False"
+                                Placement="Center"
+                                Width="350"
+                                Height="300">
+
+                                <Border
+                                    BorderBrush="Black"
+                                    BorderThickness="2"
+                                    Background="#E7E7E7">
+
+                                    <Grid
+                                        x:Name="AddOtherGrid"
+                                        HorizontalAlignment="Center"
+                                        Width="250">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Член семьи"/>
+
+                                        <ComboBox
+                                            Grid.Row="0"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            HorizontalContentAlignment="Center"
+                                            Name="WhoOtherText"
+                                            BorderThickness="0 0 0 2"
+                                            Style="{StaticResource ComboBoxStyle1}"/>
+                                        
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="ФИО"/>
+
+                                        <TextBox
+                                            Grid.Row="1"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="FIOOtherText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+                                        <TextBlock
+                                            Grid.Row="3"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Вид деятельности"/>
+
+                                        <ComboBox
+                                            Grid.Row="3"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            HorizontalContentAlignment="Center"
+                                            Name="StatusOtherText"
+                                            BorderThickness="0 0 0 2"
+                                            Style="{StaticResource ComboBoxStyle1}"/>
+
+                                        <TextBlock
+                                            Grid.Row="2"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Дата рождения"/>
+
+                                        <DatePicker
+                                            Grid.Row="2"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="DateOtherText"
+                                            Style="{StaticResource DatePickerStyle1}"/>
+
+
+                                        <Button
+                                            Grid.Row="4"
+                                            Content="Добавить"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Left"
+                                            FontSize="16"
+                                            Name="SaveOtherBtn"
+                                            Click="SaveOtherBtn_Click"/>
+
+
+                                        <Button
+                                            Grid.Row="4"
+                                            Content="Отмена"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Right"
+                                            FontSize="16"
+                                            Name="CancelOtherBtn"
+                                            Click="CancelOtherBtn_Click"/>
+
+                                        <TextBlock
+                                            Grid.Row="5"
+                                            Text="*Заполните все поля"
+                                            HorizontalAlignment="Center"
+                                            Foreground="Red"
+                                            Visibility="Hidden"
+                                            Name="WarningOtherText"/>
+
+
+                                    </Grid>
+
+                                </Border>
+
+                            </Popup>
+
+
+
+                            <TextBlock
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                Name="PassportText"
+                                FontSize="16"/>
+
+                            <Button
+                                Grid.Row="4"
+                                Grid.Column="1"
+                                Content="Добавить паспортные данные"
+                                Style="{StaticResource ButtonStyle2}"
+                                FontSize="20"
+                                Width="340"
+                                Height="40"
+                                VerticalAlignment="Bottom"
+                                Name="PassportStBtn"
+                                Click="PassportStBtn_Click"/>
+
+
+                            
+                            <!--passportPopup-->
+                            <Popup
+                                Name="PasportPopup"
+                                IsOpen="False"
+                                Placement="Center"
+                                Width="350"
+                                Height="225">
+
+                                <Border
+                                    BorderBrush="Black"
+                                    BorderThickness="2"
+                                    Background="#E7E7E7">
+
+                                    <Grid
+                                        x:Name="AddPassportGrid"
+                                        HorizontalAlignment="Center"
+                                        Width="250">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <TextBlock
+                                            Grid.Row="0"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Номер паспорта"/>
+
+                                        <TextBox
+                                            Grid.Row="0"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="NumPassportText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+                                        <TextBlock
+                                            Grid.Row="1"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Кем выдан"/>
+
+                                        <TextBox
+                                            Grid.Row="1"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="PersonPassportText"
+                                            Style="{StaticResource TextBoxStyle1}"/>
+
+                                        <TextBlock
+                                            Grid.Row="2"
+                                            FontSize="20"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Top"
+                                            Text="Дата выдачи"/>
+
+                                        <DatePicker
+                                            Grid.Row="2"
+                                            FontSize="18"
+                                            HorizontalAlignment="Stretch"
+                                            VerticalAlignment="Bottom"
+                                            Name="DatePassportText"
+                                            Style="{StaticResource DatePickerStyle1}"/>
+
+
+                                        <Button
+                                            Grid.Row="3"
+                                            Content="Добавить"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Left"
+                                            FontSize="16"
+                                            Name="SavePasportBtn"
+                                            Click="SavePasportBtn_Click"/>
+
+
+                                        <Button
+                                            Grid.Row="3"
+                                            Content="Отмена"
+                                            Style="{StaticResource ButtonStyle2}"
+                                            Width="100"
+                                            Height="30"
+                                            HorizontalAlignment="Right"
+                                            FontSize="16"
+                                            Name="CancelPasportBtn"
+                                            Click="CancelPasportBtn_Click"/>
+
+                                        <TextBlock
+                                            Grid.Row="4"
+                                            Text="*Заполните все поля"
+                                            HorizontalAlignment="Center"
+                                            Foreground="Red"
+                                            Visibility="Hidden"
+                                            Name="WarningPasportText"/>
+
+
+                                    </Grid>
+
+                                </Border>
+
+                            </Popup>
+
+                        </Grid>
+                        
+
+                    </Grid>
+                    
+                </Border>
+            </Popup>
+
+        </Grid>
+
+        
+        <!--Plan-->
+        <Grid
+            Name="PlanGrid"
+            Visibility="Hidden">
+
+            <Grid Margin="20,25,20,25">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.12*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.13*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="0.1*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Row="3" 
+                Width="220" 
+                HorizontalAlignment="Left" 
+                Content="Отчет" 
+                FontSize="20"
+                Name="otchet"
+                Height="40"
+                Margin="0 0 0 10"
+                Click="otchet_Click"
+                Style="{DynamicResource ButtonStyle2}"/>
+
+
+                <Image
+                    Grid.Row="0"
+                    Grid.RowSpan="2"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    Width="85"
+                    Height="80"
+                    Margin="15 0 0 0"
+                    Source="/images/BackBtn.png">  
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <EventSetter Event="MouseDown" Handler="Image_MouseDown"/>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+                <Label Grid.Row="0"
+                   Content="План"
+                   FontSize="40"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontFamily="Times New Roman"/>
+
+                <Label Grid.Row="1"
+                   Name="NumGroupText"
+                   Content="идеологической и воспитательной работы учебной группы № "
+                   FontSize="24"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontFamily="Times New Roman"/>
+
+
+                <StackPanel Grid.Row="2" 
+                        HorizontalAlignment="Center" 
+                        Orientation="Horizontal">
+
+                    <Label 
+                    Content="на"
+                    FontSize="24"
+                    VerticalAlignment="Center"
+                    FontFamily="Times New Roman"/>
+
+
+                    <ComboBox
+                    BorderBrush="Black"
+                    BorderThickness="0 0 0 2"
+                    x:Name="comboMounth"
+                    DisplayMemberPath="mounth1"
+                    SelectedValuePath="id_mounth"
+                    Width="230"
+                    Margin="0,10,0,10"
+                    FontSize="30" 
+                    HorizontalContentAlignment="Left"
+                    VerticalContentAlignment="Top"
+                    SelectionChanged="comboMounth_SelectionChanged" 
+                    Style="{DynamicResource ComboBoxStyle1}"
+                    Background="Transparent">
+                    </ComboBox>
+
+                </StackPanel>
+
+
+                <Button Grid.Row="3" 
+                Width="220" 
+                HorizontalAlignment="Right" 
+                Content="Изменить план" 
+                FontSize="20"
+                Height="40"
+                Margin="0 0 0 10"
+                Style="{DynamicResource ButtonStyle2}"
+                    Click="Button_Click"/>
+
+
+                <Grid Grid.Row="4"
+                  Background="#333">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition Width="450"/>
+                        <ColumnDefinition Width="140"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border 
+                    Grid.Column="0"
+                    BorderBrush="Black"
+                    BorderThickness="2 2 0 0">
+
+                        <TextBlock
+                        Foreground="White"
+                Text="Тип работ"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+
+                    </Border>
+
+                    <Border 
+                    Grid.Column="1"
+                    BorderBrush="Black"
+                    BorderThickness="2 2 0 0">
+
+                        <TextBlock
+                        Foreground="White"
+                Text="Дата"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+                    </Border>
+
+                    <Border 
+                    Grid.Column="2"
+                    BorderBrush="Black"
+                    BorderThickness="2 2 0 0">
+
+                        <TextBlock
+                        Foreground="White"
+                Text="Форма работ"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+                    </Border>
+
+                    <Border 
+                    Grid.Column="3"
+                    BorderBrush="Black"
+                    BorderThickness="2 2 2 0">
+
+                        <TextBlock
+                        Foreground="White"
+                Text="Отметка"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"/>
+                    </Border>
+
+                </Grid>
+
+
+
+
+                <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2 3 2 2">
+                    <ListView 
+                      Name="ReportList" Background="Transparent">
+
+                        <ListView.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Удалить"
+                                      Click="MenuItem_Click_1"/>
+                                <MenuItem Header="Печать"
+                                      Click="MenuItem_Click_2"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+
+                        <ListView.ItemContainerStyle>
+                            <Style TargetType="ListViewItem">
+                                <EventSetter 
+                                    Event="MouseDoubleClick"
+                                    Handler="ListViewItem_MouseDoubleClick_1"/>
+                            </Style>
+                        </ListView.ItemContainerStyle>
+
+                        <ListView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Grid>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="290"/>
+                                        <ColumnDefinition Width="130"/>
+                                        <ColumnDefinition Width="450"/>
+                                        <ColumnDefinition Width="113"/>
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Border
+                                    Grid.Column="0"
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2">
+
+                                        <TextBlock
+                                    Text="{Binding Type_plan_work.name}"
+                                    FontSize="18"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    />
+
+                                    </Border>
+
+
+                                    <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2"
+                                Grid.Column="1">
+
+                                        <TextBlock 
+                                    Text="{Binding date, StringFormat=dd.MM.yyyy}" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="18"/>
+
+                                    </Border>
+
+
+                                    <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2"
+                                Grid.Column="2">
+
+                                        <TextBlock
+                                        FontSize="18"
+                                        Text="{Binding form_work}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"/>
+
+
+                                    </Border>
+
+                                    <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 2 2"
+                                Grid.Column="3">
+
+                                        <!--<CheckBox
+                                        Name="Check"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsEnabled="False"
+                                        Margin="0,0,0,10">
+
+                                        <CheckBox.RenderTransform>
+                                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                        </CheckBox.RenderTransform>
+                                        
+                                    </CheckBox>-->
+
+                                        <TextBlock 
+                                        Name="textCheck"
+                                        Text="{Binding check_end}"
+                                        FontSize="16"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center">
+                                        </TextBlock>
+
+
+                                    </Border>
+
+                                </Grid>
+                            </DataTemplate>
+
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Border>
+            </Grid>
+
+        </Grid>
+
+
+        <!--websites-->
+        <Grid
+            Visibility="Hidden"
+            Name="SitesGrid">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Image
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Width="85"
+            Margin="15 0 0 0"
+            Source="/images/BackBtn.png">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <EventSetter Event="MouseDown" Handler="Image_MouseDown"/>
+                    </Style>
+                </Image.Style>
+            </Image>
+
+            <ListView
+                Grid.Column="0"
+                Grid.RowSpan="2"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Center"
+                Height="300"
+                Name="SitesList"
+                Margin="10"
+                Background="Transparent">
+
+                <ListView.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Удалить"
+                                      Click="MenuItem_Click"/>
+                    </ContextMenu>
+                </ListView.ContextMenu>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel
+                            Orientation="Horizontal">
+                            <TextBlock
+                                Text="Название: "
+                                Margin="0 0 0 10"/>
+                            <TextBlock
+                                 Margin="0 0 0 10"
+                                Text="{Binding website}"/>
+                            <TextBlock 
+                                 Margin="0 0 0 10"
+                                Text=" "/>
+                            <TextBlock
+                                 Margin="0 0 0 10"
+                                Text="Ссылка: "/>
+                            <TextBlock
+                                 Margin="0 0 0 10"
+                                Text="{Binding url}"/>
+
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+
+            <StackPanel
+                Grid.Column="1"
+                Grid.RowSpan="2"
+                Width="350"
+                VerticalAlignment="Center">
+
+                <TextBlock
+                    FontFamily="Times New Roman"
+                    FontSize="30"
+                    Text="Название:"
+                    Margin="5"/>
+
+                <TextBox
+                    FontSize="30"
+                    Style="{StaticResource TextBoxStyle1}"
+                    HorizontalAlignment="Stretch"
+                    Name="SiteNameText"
+                    Margin="5"/>
+
+                <TextBlock
+                    FontFamily="Times New Roman"
+                    FontSize="30"
+                    Text="Ссылка:"
+                    Margin="5"/>
+
+                <TextBox
+                    FontSize="30"
+                    Style="{StaticResource TextBoxStyle1}"
+                    HorizontalAlignment="Stretch"
+                    Name="UrlText"
+                    Margin="5"/>
+
+                <Button
+                    Style="{StaticResource ButtonStyle2}"
+                    Content="Добавить"
+                    FontFamily="Times New Roman"
+                    FontSize="30"
+                    Height="50"
+                    Margin="5"
+                    Name="SitesAddBtn"
+                    Click="SitesAddBtn_Click"/>
+
+            </StackPanel>
+   
+            
+            
+        </Grid>
+        
+    </Grid>
+</Page>

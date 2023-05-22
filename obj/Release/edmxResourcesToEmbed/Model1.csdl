@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CuratorsHelperModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Brothers_sisters">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_born" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="whois" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Brothers_sisters_student" FromRole="Brothers_sisters" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Curators">
+    <Key>
+      <PropertyRef Name="id_curator" />
+    </Key>
+    <Property Name="id_curator" Type="Int32" Nullable="false" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_group" Type="Int32" />
+    <Property Name="education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="date_born" Type="DateTime" Precision="0" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="id_cyclic" Type="Int32" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="cyclics" Relationship="Self.FK_Curators_cyclics" FromRole="Curators" ToRole="cyclics" />
+    <NavigationProperty Name="Groups" Relationship="Self.FK_Curators_Groups" FromRole="Curators" ToRole="Groups" />
+    <Property Name="id_pass" Type="Int32" />
+    <NavigationProperty Name="Passwords1" Relationship="CuratorsHelperModel.FK_Curators_Passwords" FromRole="Curators" ToRole="Passwords" />
+    <NavigationProperty Name="WebSites" Relationship="CuratorsHelperModel.FK_WebSites_Curators" FromRole="Curators" ToRole="WebSites" />
+  </EntityType>
+  <EntityType Name="cyclics">
+    <Key>
+      <PropertyRef Name="id_cyclic" />
+    </Key>
+    <Property Name="id_cyclic" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cabinet" Type="Int32" />
+    <Property Name="FIO_predsedatel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone_predsedatel" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Curators" Relationship="Self.FK_Curators_cyclics" FromRole="cyclics" ToRole="Curators" />
+  </EntityType>
+  <EntityType Name="Groups">
+    <Key>
+      <PropertyRef Name="id_group" />
+    </Key>
+    <Property Name="id_group" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="count" Type="Int32" />
+    <Property Name="id_headOfGroup" Type="Int32" />
+    <Property Name="id_head" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="id_rukovodstva" Type="Int32" />
+    <NavigationProperty Name="Curators" Relationship="Self.FK_Curators_Groups" FromRole="Groups" ToRole="Curators" />
+    <NavigationProperty Name="rukovodstvo" Relationship="Self.FK_Groups_rukovodstvo" FromRole="Groups" ToRole="rukovodstvo" />
+    <NavigationProperty Name="Plan_work" Relationship="Self.FK_Plan_work_Groups" FromRole="Groups" ToRole="Plan_work" />
+    <NavigationProperty Name="Report" Relationship="Self.FK_Report_Groups" FromRole="Groups" ToRole="Report" />
+    <NavigationProperty Name="student" Relationship="Self.FK_student_Groups" FromRole="Groups" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Hobbies">
+    <Key>
+      <PropertyRef Name="id_hobby" />
+    </Key>
+    <Property Name="id_hobby" Type="Int32" Nullable="false" />
+    <Property Name="hobby" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Student_Hobbies" Relationship="CuratorsHelperModel.FK_Student_Hobbies_Hobbies" FromRole="Hobbies" ToRole="Student_Hobbies" />
+  </EntityType>
+  <EntityType Name="Hostel">
+    <Key>
+      <PropertyRef Name="id_hostel" />
+    </Key>
+    <Property Name="id_hostel" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="room" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="reports" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Hostel_student" FromRole="Hostel" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Mounth">
+    <Key>
+      <PropertyRef Name="id_mounth" />
+    </Key>
+    <Property Name="id_mounth" Type="Int32" Nullable="false" />
+    <Property Name="mounth1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Plan_work" Relationship="Self.FK_Plan_work_Mounth" FromRole="Mounth" ToRole="Plan_work" />
+    <NavigationProperty Name="Report" Relationship="Self.FK_Report_Mounth" FromRole="Mounth" ToRole="Report" />
+  </EntityType>
+  <EntityType Name="Parents">
+    <Key>
+      <PropertyRef Name="id_parent" />
+    </Key>
+    <Property Name="id_parent" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="job_place" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="job" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_bord" Type="DateTime" Precision="0" />
+    <Property Name="parent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Parents_student" FromRole="Parents" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Passport">
+    <Key>
+      <PropertyRef Name="id_passport" />
+    </Key>
+    <Property Name="id_passport" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="num_passport" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="person_issue" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_issue" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Passport_student" FromRole="Passport" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Plan_work">
+    <Key>
+      <PropertyRef Name="id_plan" />
+    </Key>
+    <Property Name="id_plan" Type="Int32" Nullable="false" />
+    <Property Name="id_group" Type="Int32" />
+    <Property Name="id_type" Type="Int32" />
+    <Property Name="mounth" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="form_work" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="check_end" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Groups" Relationship="Self.FK_Plan_work_Groups" FromRole="Plan_work" ToRole="Groups" />
+    <NavigationProperty Name="Mounth1" Relationship="Self.FK_Plan_work_Mounth" FromRole="Plan_work" ToRole="Mounth" />
+    <NavigationProperty Name="Type_plan_work" Relationship="Self.FK_Plan_work_Type_plan_work" FromRole="Plan_work" ToRole="Type_plan_work" />
+  </EntityType>
+  <EntityType Name="Report">
+    <Key>
+      <PropertyRef Name="id_report" />
+    </Key>
+    <Property Name="id_report" Type="Int32" Nullable="false" />
+    <Property Name="id_group" Type="Int32" />
+    <Property Name="mounth" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="text_report" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Groups" Relationship="Self.FK_Report_Groups" FromRole="Report" ToRole="Groups" />
+    <NavigationProperty Name="Mounth1" Relationship="Self.FK_Report_Mounth" FromRole="Report" ToRole="Mounth" />
+    <Property Name="hours_week" Type="Double" />
+    <Property Name="hours_day" Type="Double" />
+    <Property Name="check_end" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="roles">
+    <Key>
+      <PropertyRef Name="id_role" />
+    </Key>
+    <Property Name="id_role" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="rukovodstvo" Relationship="Self.FK_rukovodstvo_roles" FromRole="roles" ToRole="rukovodstvo" />
+  </EntityType>
+  <EntityType Name="rukovodstvo">
+    <Key>
+      <PropertyRef Name="id_rukovodstva" />
+    </Key>
+    <Property Name="id_rukovodstva" Type="Int32" Nullable="false" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="id_role" Type="Int32" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="post" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Groups" Relationship="Self.FK_Groups_rukovodstvo" FromRole="rukovodstvo" ToRole="Groups" />
+    <NavigationProperty Name="roles" Relationship="Self.FK_rukovodstvo_roles" FromRole="rukovodstvo" ToRole="roles" />
+    <Property Name="id_pass" Type="Int32" />
+    <NavigationProperty Name="Passwords1" Relationship="CuratorsHelperModel.FK_rukovodstvo_Passwords" FromRole="rukovodstvo" ToRole="Passwords" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="id_student" />
+    </Key>
+    <Property Name="id_student" Type="Int32" Nullable="false" />
+    <Property Name="FIO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date_born" Type="DateTime" Precision="0" />
+    <Property Name="adres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="id_group" Type="Int32" />
+    <Property Name="school" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Brothers_sisters" Relationship="Self.FK_Brothers_sisters_student" FromRole="student" ToRole="Brothers_sisters" />
+    <NavigationProperty Name="Groups" Relationship="Self.FK_student_Groups" FromRole="student" ToRole="Groups" />
+    <NavigationProperty Name="Hostel" Relationship="Self.FK_Hostel_student" FromRole="student" ToRole="Hostel" />
+    <NavigationProperty Name="Parents" Relationship="Self.FK_Parents_student" FromRole="student" ToRole="Parents" />
+    <NavigationProperty Name="Passport" Relationship="Self.FK_Passport_student" FromRole="student" ToRole="Passport" />
+    <NavigationProperty Name="Works_parent" Relationship="Self.FK_Works_parent_student" FromRole="student" ToRole="Works_parent" />
+    <NavigationProperty Name="Works_student" Relationship="Self.FK_Works_student_student" FromRole="student" ToRole="Works_student" />
+    <NavigationProperty Name="Achivment_student" Relationship="CuratorsHelperModel.FK_Achivment_student_student" FromRole="student" ToRole="Achivment_student" />
+    <NavigationProperty Name="Facts_assotial" Relationship="CuratorsHelperModel.FK_Facts_assotial_student" FromRole="student" ToRole="Facts_assotial" />
+    <Property Name="national" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="health" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="relationship" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Student_Hobbies" Relationship="CuratorsHelperModel.FK_Student_Hobbies_student" FromRole="student" ToRole="Student_Hobbies" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type_plan_work">
+    <Key>
+      <PropertyRef Name="id_type" />
+    </Key>
+    <Property Name="id_type" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Plan_work" Relationship="Self.FK_Plan_work_Type_plan_work" FromRole="Type_plan_work" ToRole="Plan_work" />
+  </EntityType>
+  <EntityType Name="Works_parent">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="id_parent" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="result" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="text_work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Works_parent_student" FromRole="Works_parent" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Works_student">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="Int32" Nullable="false" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="text_work" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="result" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="Self.FK_Works_student_student" FromRole="Works_student" ToRole="student" />
+  </EntityType>
+  <Association Name="FK_Brothers_sisters_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="Brothers_sisters" Type="Self.Brothers_sisters" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Brothers_sisters">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curators_cyclics">
+    <End Role="cyclics" Type="Self.cyclics" Multiplicity="0..1" />
+    <End Role="Curators" Type="Self.Curators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cyclics">
+        <PropertyRef Name="id_cyclic" />
+      </Principal>
+      <Dependent Role="Curators">
+        <PropertyRef Name="id_cyclic" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curators_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Curators" Type="Self.Curators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="id_group" />
+      </Principal>
+      <Dependent Role="Curators">
+        <PropertyRef Name="id_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Groups_rukovodstvo">
+    <End Role="rukovodstvo" Type="Self.rukovodstvo" Multiplicity="0..1" />
+    <End Role="Groups" Type="Self.Groups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="rukovodstvo">
+        <PropertyRef Name="id_rukovodstva" />
+      </Principal>
+      <Dependent Role="Groups">
+        <PropertyRef Name="id_rukovodstva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_work_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Plan_work" Type="Self.Plan_work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="id_group" />
+      </Principal>
+      <Dependent Role="Plan_work">
+        <PropertyRef Name="id_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="id_group" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="id_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_student_Groups">
+    <End Role="Groups" Type="Self.Groups" Multiplicity="0..1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Groups">
+        <PropertyRef Name="id_group" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="id_group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hostel_student">
+    <End Type="Self.student" Multiplicity="0..1" Role="student" />
+    <End Type="Self.Hostel" Multiplicity="*" Role="Hostel" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Hostel">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_work_Mounth">
+    <End Role="Mounth" Type="Self.Mounth" Multiplicity="0..1" />
+    <End Role="Plan_work" Type="Self.Plan_work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mounth">
+        <PropertyRef Name="id_mounth" />
+      </Principal>
+      <Dependent Role="Plan_work">
+        <PropertyRef Name="mounth" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Report_Mounth">
+    <End Role="Mounth" Type="Self.Mounth" Multiplicity="0..1" />
+    <End Role="Report" Type="Self.Report" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mounth">
+        <PropertyRef Name="id_mounth" />
+      </Principal>
+      <Dependent Role="Report">
+        <PropertyRef Name="mounth" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Parents_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="Parents" Type="Self.Parents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Parents">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Passport_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="Passport" Type="Self.Passport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Passport">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_work_Type_plan_work">
+    <End Role="Type_plan_work" Type="Self.Type_plan_work" Multiplicity="0..1" />
+    <End Role="Plan_work" Type="Self.Plan_work" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_plan_work">
+        <PropertyRef Name="id_type" />
+      </Principal>
+      <Dependent Role="Plan_work">
+        <PropertyRef Name="id_type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rukovodstvo_roles">
+    <End Role="roles" Type="Self.roles" Multiplicity="0..1" />
+    <End Role="rukovodstvo" Type="Self.rukovodstvo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="roles">
+        <PropertyRef Name="id_role" />
+      </Principal>
+      <Dependent Role="rukovodstvo">
+        <PropertyRef Name="id_role" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Works_parent_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="Works_parent" Type="Self.Works_parent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Works_parent">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Works_student_student">
+    <End Role="student" Type="Self.student" Multiplicity="0..1" />
+    <End Role="Works_student" Type="Self.Works_student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Works_student">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CuratorsHelperEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Brothers_sisters" EntityType="Self.Brothers_sisters" />
+    <EntitySet Name="Curators" EntityType="Self.Curators" />
+    <EntitySet Name="cyclics" EntityType="Self.cyclics" />
+    <EntitySet Name="Groups" EntityType="Self.Groups" />
+    <EntitySet Name="Hobbies" EntityType="Self.Hobbies" />
+    <EntitySet Name="Hostel" EntityType="Self.Hostel" />
+    <EntitySet Name="Mounth" EntityType="Self.Mounth" />
+    <EntitySet Name="Parents" EntityType="Self.Parents" />
+    <EntitySet Name="Passport" EntityType="Self.Passport" />
+    <EntitySet Name="Plan_work" EntityType="Self.Plan_work" />
+    <EntitySet Name="Report" EntityType="Self.Report" />
+    <EntitySet Name="roles" EntityType="Self.roles" />
+    <EntitySet Name="rukovodstvo" EntityType="Self.rukovodstvo" />
+    <EntitySet Name="student" EntityType="Self.student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Type_plan_work" EntityType="Self.Type_plan_work" />
+    <EntitySet Name="Works_parent" EntityType="Self.Works_parent" />
+    <EntitySet Name="Works_student" EntityType="Self.Works_student" />
+    <AssociationSet Name="FK_Brothers_sisters_student" Association="Self.FK_Brothers_sisters_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Brothers_sisters" EntitySet="Brothers_sisters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curators_cyclics" Association="Self.FK_Curators_cyclics">
+      <End Role="cyclics" EntitySet="cyclics" />
+      <End Role="Curators" EntitySet="Curators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curators_Groups" Association="Self.FK_Curators_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Curators" EntitySet="Curators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Groups_rukovodstvo" Association="Self.FK_Groups_rukovodstvo">
+      <End Role="rukovodstvo" EntitySet="rukovodstvo" />
+      <End Role="Groups" EntitySet="Groups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_work_Groups" Association="Self.FK_Plan_work_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Plan_work" EntitySet="Plan_work" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Groups" Association="Self.FK_Report_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_student_Groups" Association="Self.FK_student_Groups">
+      <End Role="Groups" EntitySet="Groups" />
+      <End Role="student" EntitySet="student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hostel_student" Association="Self.FK_Hostel_student">
+      <End EntitySet="student" Role="student" />
+      <End EntitySet="Hostel" Role="Hostel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_work_Mounth" Association="Self.FK_Plan_work_Mounth">
+      <End Role="Mounth" EntitySet="Mounth" />
+      <End Role="Plan_work" EntitySet="Plan_work" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Report_Mounth" Association="Self.FK_Report_Mounth">
+      <End Role="Mounth" EntitySet="Mounth" />
+      <End Role="Report" EntitySet="Report" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Parents_student" Association="Self.FK_Parents_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Parents" EntitySet="Parents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Passport_student" Association="Self.FK_Passport_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Passport" EntitySet="Passport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_work_Type_plan_work" Association="Self.FK_Plan_work_Type_plan_work">
+      <End Role="Type_plan_work" EntitySet="Type_plan_work" />
+      <End Role="Plan_work" EntitySet="Plan_work" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rukovodstvo_roles" Association="Self.FK_rukovodstvo_roles">
+      <End Role="roles" EntitySet="roles" />
+      <End Role="rukovodstvo" EntitySet="rukovodstvo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Works_parent_student" Association="Self.FK_Works_parent_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Works_parent" EntitySet="Works_parent" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Works_student_student" Association="Self.FK_Works_student_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Works_student" EntitySet="Works_student" />
+    </AssociationSet>
+    <EntitySet Name="Achivment_student" EntityType="CuratorsHelperModel.Achivment_student" />
+    <EntitySet Name="Facts_assotial" EntityType="CuratorsHelperModel.Facts_assotial" />
+    <EntitySet Name="Passwords" EntityType="CuratorsHelperModel.Passwords" />
+    <AssociationSet Name="FK_Achivment_student_student" Association="CuratorsHelperModel.FK_Achivment_student_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Achivment_student" EntitySet="Achivment_student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Facts_assotial_student" Association="CuratorsHelperModel.FK_Facts_assotial_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Facts_assotial" EntitySet="Facts_assotial" />
+    </AssociationSet>
+    <EntitySet Name="Student_Hobbies" EntityType="CuratorsHelperModel.Student_Hobbies" />
+    <AssociationSet Name="FK_Student_Hobbies_Hobbies" Association="CuratorsHelperModel.FK_Student_Hobbies_Hobbies">
+      <End Role="Hobbies" EntitySet="Hobbies" />
+      <End Role="Student_Hobbies" EntitySet="Student_Hobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Hobbies_student" Association="CuratorsHelperModel.FK_Student_Hobbies_student">
+      <End Role="student" EntitySet="student" />
+      <End Role="Student_Hobbies" EntitySet="Student_Hobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Curators_Passwords" Association="CuratorsHelperModel.FK_Curators_Passwords">
+      <End Role="Passwords" EntitySet="Passwords" />
+      <End Role="Curators" EntitySet="Curators" />
+    </AssociationSet>
+    <AssociationSet Name="FK_rukovodstvo_Passwords" Association="CuratorsHelperModel.FK_rukovodstvo_Passwords">
+      <End Role="Passwords" EntitySet="Passwords" />
+      <End Role="rukovodstvo" EntitySet="rukovodstvo" />
+    </AssociationSet>
+    <EntitySet Name="WebSites" EntityType="CuratorsHelperModel.WebSites" />
+    <AssociationSet Name="FK_WebSites_Curators" Association="CuratorsHelperModel.FK_WebSites_Curators">
+      <End Role="Curators" EntitySet="Curators" />
+      <End Role="WebSites" EntitySet="WebSites" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Achivment_student">
+    <Key>
+      <PropertyRef Name="id_achivment" />
+    </Key>
+    <Property Name="id_achivment" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="text_achivment" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="form" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="CuratorsHelperModel.FK_Achivment_student_student" FromRole="Achivment_student" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Facts_assotial">
+    <Key>
+      <PropertyRef Name="id_fact" />
+    </Key>
+    <Property Name="id_fact" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="0" />
+    <Property Name="character" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="measures" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="result" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="student" Relationship="CuratorsHelperModel.FK_Facts_assotial_student" FromRole="Facts_assotial" ToRole="student" />
+  </EntityType>
+  <EntityType Name="Passwords">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="salt" Type="Binary" MaxLength="100" FixedLength="false" />
+    <NavigationProperty Name="Curators1" Relationship="CuratorsHelperModel.FK_Curators_Passwords" FromRole="Passwords" ToRole="Curators" />
+    <NavigationProperty Name="rukovodstvo1" Relationship="CuratorsHelperModel.FK_rukovodstvo_Passwords" FromRole="Passwords" ToRole="rukovodstvo" />
+  </EntityType>
+  <Association Name="FK_Achivment_student_student">
+    <End Type="CuratorsHelperModel.student" Role="student" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.Achivment_student" Role="Achivment_student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Achivment_student">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Facts_assotial_student">
+    <End Type="CuratorsHelperModel.student" Role="student" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.Facts_assotial" Role="Facts_assotial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Facts_assotial">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Student_Hobbies">
+    <Key>
+      <PropertyRef Name="id_num" />
+    </Key>
+    <Property Name="id_num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_student" Type="Int32" />
+    <Property Name="id_hobby" Type="Int32" />
+    <NavigationProperty Name="Hobbies" Relationship="CuratorsHelperModel.FK_Student_Hobbies_Hobbies" FromRole="Student_Hobbies" ToRole="Hobbies" />
+    <NavigationProperty Name="student" Relationship="CuratorsHelperModel.FK_Student_Hobbies_student" FromRole="Student_Hobbies" ToRole="student" />
+  </EntityType>
+  <Association Name="FK_Student_Hobbies_Hobbies">
+    <End Type="CuratorsHelperModel.Hobbies" Role="Hobbies" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.Student_Hobbies" Role="Student_Hobbies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobbies">
+        <PropertyRef Name="id_hobby" />
+      </Principal>
+      <Dependent Role="Student_Hobbies">
+        <PropertyRef Name="id_hobby" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Hobbies_student">
+    <End Type="CuratorsHelperModel.student" Role="student" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.Student_Hobbies" Role="Student_Hobbies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="id_student" />
+      </Principal>
+      <Dependent Role="Student_Hobbies">
+        <PropertyRef Name="id_student" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Curators_Passwords">
+    <End Type="CuratorsHelperModel.Passwords" Role="Passwords" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.Curators" Role="Curators" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Passwords">
+        <PropertyRef Name="id_num" />
+      </Principal>
+      <Dependent Role="Curators">
+        <PropertyRef Name="id_pass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_rukovodstvo_Passwords">
+    <End Type="CuratorsHelperModel.Passwords" Role="Passwords" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.rukovodstvo" Role="rukovodstvo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Passwords">
+        <PropertyRef Name="id_num" />
+      </Principal>
+      <Dependent Role="rukovodstvo">
+        <PropertyRef Name="id_pass" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="WebSites">
+    <Key>
+      <PropertyRef Name="id_site" />
+    </Key>
+    <Property Name="id_site" Type="Int32" Nullable="false" />
+    <Property Name="id_curator" Type="Int32" />
+    <Property Name="website" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Curators" Relationship="CuratorsHelperModel.FK_WebSites_Curators" FromRole="WebSites" ToRole="Curators" />
+  </EntityType>
+  <Association Name="FK_WebSites_Curators">
+    <End Type="CuratorsHelperModel.Curators" Role="Curators" Multiplicity="0..1" />
+    <End Type="CuratorsHelperModel.WebSites" Role="WebSites" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Curators">
+        <PropertyRef Name="id_curator" />
+      </Principal>
+      <Dependent Role="WebSites">
+        <PropertyRef Name="id_curator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

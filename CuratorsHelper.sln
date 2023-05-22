@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuratorsHelper", "CuratorsHelper.csproj", "{45B0FFD6-521C-42B7-A8D9-27C3CA6E8EB2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "CuratorsSetup", "..\CuratorsSetup\CuratorsSetup.vdproj", "{8324234C-BB40-4BD0-A444-970E9F0CCCCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45B0FFD6-521C-42B7-A8D9-27C3CA6E8EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45B0FFD6-521C-42B7-A8D9-27C3CA6E8EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45B0FFD6-521C-42B7-A8D9-27C3CA6E8EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45B0FFD6-521C-42B7-A8D9-27C3CA6E8EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8324234C-BB40-4BD0-A444-970E9F0CCCCB}.Debug|Any CPU.ActiveCfg = Debug
+		{8324234C-BB40-4BD0-A444-970E9F0CCCCB}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F77D65DC-9F77-404A-89CF-17C5A8B70FD1}
+	EndGlobalSection
+EndGlobal

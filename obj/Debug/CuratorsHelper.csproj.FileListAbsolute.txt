@@ -1,0 +1,218 @@
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.exe.config
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.exe
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.pdb
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Memory.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Buffers.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.xml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.AssemblyReference.cache
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\App.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_Content.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_MarkupCompile.cache
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_MarkupCompile.lref
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.g.resources
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.Properties.Resources.resources
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.GenerateResource.cache
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.CoreCompileInputs.cache
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.CopyComplete
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.exe
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.pdb
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.exe.config
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\Dictionary1.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\App.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\ButtonShadow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\CloudPage.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\GroupsPage.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainMenuCurators.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainWindow.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfilePage.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ViberPage.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\CloudPage.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\GroupsPage.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainMenuCurators.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainWindow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfilePage.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ViberPage.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ChangePlan.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ChangePlan.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalAccept.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalAccept.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPlan.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPlan.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\RichTextBoxResourses.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentsWindow.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentsWindow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\TextBoxInput.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\NewButton.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\NewCheckBox.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\NewComboBox.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\ListViewItemsStyle.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\NewDatePicker.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\RichTextBoxDefault.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Passport_Modal.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Passport_Modal.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Parents.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Parents.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_OtherFamily.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_OtherFamily.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\DateTextPicker.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\DatePickerButton.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\CalendarStyle.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarButton.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarDayButton.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newFocusVisual.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarItem.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\DatePickerStudent.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Hobbies.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Hobbies.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PersonalWorksWindow.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PersonalWorksWindow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentStudentWindow.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentStudentWindow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialStudentWindow.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialStudentWindow.baml
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\viewOther\GroupsPsyho.g.cs
+C:\Users\Professional\Desktop\ДИПЛОМ\CuratorsHelper\obj\Debug\viewOther\GroupsPsyho.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.exe.config
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.exe
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Argon2.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Blake2.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Buffers.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Argon2.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Konscious.Security.Cryptography.Blake2.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\ButtonShadow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\CalendarStyle.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarButton.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarDayButton.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newCalendarItem.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CalendarStyles\newFocusVisual.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\DatePickerButton.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\DatePickerStudent.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\DateTextPicker.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\ListViewItemsStyle.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\NewButton.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\NewCheckBox.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\NewComboBox.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\NewDatePicker.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\RichTextBoxDefault.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\RichTextBoxResourses.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\TextBoxInput.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\Dictionary1.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\viewOther\GroupsPsyho.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentStudentWindow.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialStudentWindow.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Hobbies.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ChangePlan.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\CloudPage.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\GroupsPage.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainMenuCurators.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainWindow.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalAccept.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_OtherFamily.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Parents.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Passport_Modal.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PersonalWorksWindow.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfilePage.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPlan.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentsWindow.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ViberPage.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\App.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_Content.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_MarkupCompile.cache
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper_MarkupCompile.lref
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\App.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\viewOther\GroupsPsyho.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentStudentWindow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialStudentWindow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Hobbies.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ChangePlan.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\CloudPage.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\GroupsPage.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainMenuCurators.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\MainWindow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalAccept.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_OtherFamily.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Modal_Parents.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\Passport_Modal.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PersonalWorksWindow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfilePage.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPlan.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentsWindow.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ViberPage.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.g.resources
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.Properties.Resources.resources
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.GenerateResource.cache
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.CoreCompileInputs.cache
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.CopyComplete
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.exe
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PrintPanel.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PrintPanel.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfileSettings.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ProfileSettings.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalSettings.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ModalSettings.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Auth.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Core.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Gmail.v1.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Auth.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Core.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Core.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Gmail.v1.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Gmail.v1.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.dll.config
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.AssemblyReference.cache
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Memory.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Memory.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Drive.v3.dll
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Drive.v3.pdb
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Drive.v3.xml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentAddModalQuest.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentAddModalQuest.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\MyMessage.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\MyMessage.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.exe.manifest
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\CuratorsHelper.application
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.exe.manifest
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.application
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialPrint.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AssotialPrint.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentPrint.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentWorkPrint.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AchivmentPrint.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\StudentWorkPrint.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PlanPrint.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPrint.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\PlanPrint.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPrint.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AdminPanel\AdminMain.g.cs
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AdminPanel\AdminMain.baml

@@ -1,0 +1,298 @@
+﻿<Window x:Class="CuratorsHelper.View.PlanPrint"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CuratorsHelper.View"
+        mc:Ignorable="d"
+         Title="CuratorsHelper" 
+        Height="900"
+        Width="1440" 
+        WindowState="Maximized" 
+        Background="#E7E7E7"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Window.Resources>
+        <Image x:Key="closeApp" Source="/images/close.png"/>
+        <Style TargetType="Button" x:Key="menuStyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border 
+                                    x:Name="border" 
+                                    CornerRadius="50"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    ClipToBounds="True" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" 
+                                    Background="{TemplateBinding Background}" 
+                                    SnapsToDevicePixels="true">
+
+                            <ContentPresenter 
+                                        x:Name="contentPresenter" 
+                                        Focusable="False" 
+                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                        Margin="{TemplateBinding Padding}" 
+                                        RecognizesAccessKey="True"
+                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="BorderThickness" TargetName="border" Value="0.5"/>
+                                <Setter Property="Margin" TargetName="border" Value="0.5"/>
+                                <Setter Property="BorderBrush" 
+                                                TargetName="border" 
+                                                Value="#CCAD0000"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" TargetName="border" Value="#FF1B1B1B"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#CCAD0000"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.039*"/>
+            <RowDefinition Height="0.12*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background="#7196B9" Grid.Row="0"/>
+
+        <Grid Background="#222" Grid.Row="0"/>
+
+        <TextBlock
+            Text="CuratorsHelper"
+            HorizontalAlignment="Left"
+            Foreground="White"
+            VerticalAlignment="Center"
+            FontSize="20"
+            Margin="10 0 0 0"/>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+
+            <Button  
+                Click="collapseWindow_Click"
+            Name="collapseWindow"
+            Content="___"
+            Foreground="#888888"  
+            Margin="0 0 5 0"
+            Width="20" Height="20"
+            HorizontalAlignment="Right"
+            Background="#222"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Style="{StaticResource menuStyle}">
+
+            </Button>
+
+
+            <Button 
+                Click="closeWindow_Click"
+            Name="closeWindow"
+            Content="╳"
+            Foreground="#888888"  
+            Width="20" Height="20"
+            Background="#222"
+            HorizontalAlignment="Right"
+            BorderThickness="0"
+                Style="{StaticResource menuStyle}">
+
+            </Button>
+
+
+        </StackPanel>
+
+
+        <Grid Background="#CDCDCD" Grid.Row="1"/>
+
+        <Image
+            Grid.Row="1"
+            HorizontalAlignment="Left"
+            Width="85"
+            Margin="15 0 0 0"
+            Source="/images/BackBtn.png">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <EventSetter Event="MouseDown" Handler="Image_MouseDown"/>
+                </Style>
+            </Image.Style>
+        </Image>
+
+        <StackPanel Grid.Row="1"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 10 0">
+            <StackPanel.Style>
+                <Style TargetType="StackPanel">
+                    <EventSetter Event="MouseDown" Handler="StackPanel_MouseDown"/>
+                </Style>
+            </StackPanel.Style>
+
+            <Image
+                Width="60"
+                Source="/images/bxs_exit.png"/>
+
+            <TextBlock
+                Text="Выход"
+                Foreground="#222"
+                FontSize="28"
+                FontFamily="Inter"/>
+
+        </StackPanel>
+
+        <Grid Grid.Row="2">
+
+            <DocumentViewer
+                Name="docView">
+                <FixedDocument
+                    IsEnabled="False">
+                    <PageContent>
+                        <FixedPage>
+                            <Grid HorizontalAlignment="Center">
+                                <StackPanel>
+
+
+                                    <Label Grid.Row="0"
+                                           Content="План"
+                                           FontSize="40"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Times New Roman"/>
+
+                                    <Label Grid.Row="1"
+                                           Name="NumGroupText"
+                                           Content="идеологической и воспитательной работы учебной группы № "
+                                           FontSize="24"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           FontFamily="Times New Roman"/>
+
+                                    <TextBlock
+                                            Margin="10 0 0 0"
+                                        Text="на "
+                                        FontSize="28"
+                                        HorizontalAlignment="Center"
+                                        Name="TitleText"
+                                        FontFamily="Times New Roman"/>
+
+                                    <Border Grid.Row="5" BorderBrush="Black" BorderThickness="2 3 2 2">
+                                        <ListView 
+                      Name="ReportList" Background="Transparent">
+
+                                            <ListView.ItemTemplate>
+
+                                                <DataTemplate>
+
+                                                    <Grid>
+
+                                                        <Grid.ColumnDefinitions>
+                                                            <ColumnDefinition Width="200"/>
+                                                            <ColumnDefinition Width="125"/>
+                                                            <ColumnDefinition Width="350"/>
+                                                            <ColumnDefinition Width="125"/>
+                                                        </Grid.ColumnDefinitions>
+
+
+                                                        <Border
+                                    Grid.Column="0"
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2">
+
+                                                            <TextBlock
+                                    Text="{Binding Type_plan_work.name}"
+                                    FontSize="18"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    />
+
+                                                        </Border>
+
+
+                                                        <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2"
+                                Grid.Column="1">
+
+                                                            <TextBlock 
+                                    Text="{Binding date, StringFormat=dd.MM.yyyy}" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="18"/>
+
+                                                        </Border>
+
+
+                                                        <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 0 2"
+                                Grid.Column="2">
+
+                                                            <TextBlock
+                                        FontSize="18"
+                                        Text="{Binding form_work}"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        TextWrapping="Wrap"/>
+
+
+                                                        </Border>
+
+                                                        <Border
+                                BorderBrush="Black"
+                                BorderThickness="2 2 2 2"
+                                Grid.Column="3">
+
+                                                            <!--<CheckBox
+                                        Name="Check"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center"
+                                        IsEnabled="False"
+                                        Margin="0,0,0,10">
+
+                                        <CheckBox.RenderTransform>
+                                            <ScaleTransform ScaleX="2" ScaleY="2"/>
+                                        </CheckBox.RenderTransform>
+                                        
+                                    </CheckBox>-->
+
+                                                            <TextBlock 
+                                        Name="textCheck"
+                                        Text="{Binding check_end}"
+                                        FontSize="16"
+                                        HorizontalAlignment="Center"
+                                        VerticalAlignment="Center">
+                                                            </TextBlock>
+
+
+                                                        </Border>
+
+                                                    </Grid>
+                                                </DataTemplate>
+
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </Border>
+
+
+                                </StackPanel>
+                            </Grid>
+                        </FixedPage>
+                    </PageContent>
+                </FixedDocument>
+            </DocumentViewer>
+
+        </Grid>
+
+    </Grid>
+</Window>
+

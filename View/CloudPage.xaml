@@ -1,0 +1,143 @@
+﻿<Page x:Class="CuratorsHelper.CloudPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CuratorsHelper"
+      mc:Ignorable="d" 
+       d:DesignHeight="970" d:DesignWidth="1060"
+      Title="CloudPage">
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel
+            Grid.Column="0"
+            Width="400"
+            VerticalAlignment="Center">
+
+            <Label 
+            Content="Кому:" 
+            FontSize="20"/>
+
+            <ComboBox
+            x:Name="ToTextBox" 
+                Style="{StaticResource ComboBoxStyle1}"
+            FontSize="18"
+                BorderThickness="0 0 0 2"
+                HorizontalContentAlignment="Left"
+                DisplayMemberPath="FIO"
+                SelectedValuePath="email"/>
+
+            <Label 
+            Content="Заголовок:" 
+            VerticalAlignment="Center"
+                FontSize="20"/>
+            
+            <TextBox 
+            x:Name="SubjectTextBox" 
+            Style="{StaticResource TextBoxStyle1}"
+            FontWeight="Bold"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Left"
+            FontSize="16"/>
+
+            <Label 
+            Content="Сообщение:"
+                FontSize="20"/>
+
+            <TextBox 
+            x:Name="MessageTextBox" 
+            AcceptsReturn="True" 
+            Style="{StaticResource TextBoxStyle1}"
+            VerticalContentAlignment="Stretch"
+            TextWrapping="Wrap"
+                FontSize="14"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Left"/>
+
+            <Button 
+                x:Name="SendButton" 
+                Content="Отправить" 
+                Style="{StaticResource ButtonStyle2}"
+                Click="SendButton_Click"  
+                Height="40"
+                Margin="10"
+                FontSize="20"/>
+
+
+        </StackPanel>
+
+
+        <StackPanel
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            
+        <TextBlock
+            Text="Ваша почта"
+            Grid.Column="1"
+            FontSize="30"
+            FontFamily="Times New Roman"/>
+
+        <ListView 
+            Grid.Column="1"
+            x:Name="MessageListView" 
+            Grid.Row="1"
+            Margin="10"
+            BorderThickness="1"
+            BorderBrush="Black"
+            Height="300"
+            Width="500"
+            VerticalContentAlignment="Stretch"
+            HorizontalContentAlignment="Stretch"
+            Background="Transparent">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Border
+                            BorderBrush="#222"
+                            BorderThickness="0 0 0 2"
+                            Margin="0 0 0 5">
+                            <TextBlock 
+                                Text="{Binding From}" 
+                                VerticalAlignment="Center"
+                                Width="150"
+                                TextWrapping="Wrap"/>
+                        </Border>
+
+                        <Border
+                             BorderBrush="#222"
+                            BorderThickness="0 0 0 2"
+                            Margin="0 0 0 5">
+                            <TextBlock 
+                                Text="{Binding Subject}" 
+                                VerticalAlignment="Center"
+                                Width="100"
+                                TextWrapping="Wrap"
+                                HorizontalAlignment="Center"/>
+                        </Border>
+
+
+                        <Border
+                             BorderBrush="#222"
+                            BorderThickness="0 0 0 2"
+                            Margin="0 0 0 5">
+                            <TextBlock 
+                                Text="{Binding Snippet}" 
+                                TextWrapping="Wrap"
+                                Width="200"/>
+                            </Border>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            
+        </StackPanel>
+
+    </Grid>
+</Page>
