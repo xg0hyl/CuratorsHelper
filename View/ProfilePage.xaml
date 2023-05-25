@@ -16,7 +16,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="60"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
@@ -80,13 +80,13 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition Height="3*"/>
+                <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="0.8*"/>
+                <ColumnDefinition Width="0*"/>
             </Grid.ColumnDefinitions>
 
             <Image
@@ -184,6 +184,7 @@
                 FontSize="36"
                 FontFamily="Times New Roman"
                 HorizontalAlignment="Left"
+                TextWrapping="Wrap"
                 VerticalAlignment="Top"/>
 
             <Grid 
@@ -193,7 +194,8 @@
                 Width="557"
                 Height="0"
                 VerticalAlignment="Top"
-                Margin="0 60 0 0"
+                HorizontalAlignment="Left"
+                Margin="0 90 0 0"
                 Name="MoveGrid">
 
                 <Grid.RowDefinitions>

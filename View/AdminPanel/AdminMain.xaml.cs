@@ -647,13 +647,8 @@ namespace CuratorsHelper.View.AdminPanel
                     CuratorsHelperEntities.GetContext().SaveChanges();
                     ListCyclic.ItemsSource = CuratorsHelperEntities.GetContext().cyclics.ToList();
                     HandCycl = false;
-                    foreach (var item in AddCyclicStack.Children)
-                    {
-                        if (item is TextBox)
-                        {
-                            (item as TextBox).Clear();
-                        }
-                    }
+                    
+                    AddCyclicStack.DataContext = null;
 
                 }
                 catch (Exception msg)

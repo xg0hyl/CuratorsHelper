@@ -504,36 +504,6 @@ namespace CuratorsHelper.View
                 }
             }
 
-            else if ((sender as Image).Name == "Mother_access" || (sender as Image).Name == "Father_access")
-            {
-                edit[Array.IndexOf(accept, (sender as Image))].Visibility = Visibility.Visible;
-                cancel[Array.IndexOf(accept, (sender as Image))].Visibility = Visibility.Hidden;
-                (sender as Image).Visibility = Visibility.Hidden;
-
-                if (ParentHand != "Del")
-                {
-                    if (ParentHand == "Add") CuratorsHelperEntities.GetContext().Parents.Add(selectParent);
-                    else CuratorsHelperEntities.GetContext().Entry(selectParent).State = System.Data.Entity.EntityState.Modified;
-
-                }
-                else
-                {
-                    CuratorsHelperEntities.GetContext().Parents.Remove(selectParent);
-                    tb[Array.IndexOf(accept, (sender as Image))].Clear();
-                }
-                try
-                {
-                    CuratorsHelperEntities.GetContext().SaveChanges();
-                    GridStatic();
-                    GridChange();
-
-                }
-                catch
-                {
-                    MyMessage.Show("Что-то пошло не так");
-                }
-
-            }
 
             else if ((sender as Image).Name == "Other_access")
             {
@@ -673,8 +643,6 @@ namespace CuratorsHelper.View
 
                     if (ParentsWin.ShowDialog() == true)
                     {
-                        accept[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
-                        cancel[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
                         (sender as Image).Visibility = Visibility.Hidden;
                         if ((sender as Image).Name == "Mother_edit")
                             SaveText = MotherText.Text;
@@ -697,6 +665,30 @@ namespace CuratorsHelper.View
                         }
                         else if ((sender as Image).Name == "Mother_edit") MotherText.Text = null;
                         else if ((sender as Image).Name == "Father_edit") FatherText.Text = null;
+
+
+                        if (ParentHand != "Del")
+                        {
+                            if (ParentHand == "Add") CuratorsHelperEntities.GetContext().Parents.Add(selectParent);
+                            else CuratorsHelperEntities.GetContext().Entry(selectParent).State = System.Data.Entity.EntityState.Modified;
+
+                        }
+                        else
+                        {
+                            CuratorsHelperEntities.GetContext().Parents.Remove(selectParent);
+                            tb[Array.IndexOf(accept, (sender as Image))].Clear();
+                        }
+                        try
+                        {
+                            CuratorsHelperEntities.GetContext().SaveChanges();
+                            GridStatic();
+                            GridChange();
+
+                        }
+                        catch
+                        {
+                            MyMessage.Show("Что-то пошло не так");
+                        }
                     }
                 }
 
@@ -706,8 +698,6 @@ namespace CuratorsHelper.View
                     
                     if (otherParents.ShowDialog() == true)
                     {
-                        accept[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
-                        cancel[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
                         (sender as Image).Visibility = Visibility.Hidden;
                         SaveText = Sisters.Text;
                         SaveText2 = Brothers.Text;
@@ -730,6 +720,32 @@ namespace CuratorsHelper.View
                             else if (selectFamily.whois == "Сестра")
                                 Sisters.Text += selectFamily.whois + ": " + selectFamily.FIO + ", " + OtherDate.Date.ToString("dd.MM.yyyy") + ", " + selectFamily.status + "\n";
                         }
+
+                        if (OtherHand != "Del")
+                        {
+                            if (OtherHand == "Add") CuratorsHelperEntities.GetContext().Brothers_sisters.Add(selectFamily);
+                            else CuratorsHelperEntities.GetContext().Entry(selectFamily).State = System.Data.Entity.EntityState.Modified;
+
+                        }
+                        else
+                        {
+                            CuratorsHelperEntities.GetContext().Brothers_sisters.Remove(selectFamily);
+                        }
+
+                        try
+                        {
+                            CuratorsHelperEntities.GetContext().SaveChanges();
+                            Brothers.Clear();
+                            Sisters.Clear();
+                            WriteFamily();
+                            GridStatic();
+                            GridChange();
+                        }
+                        catch
+                        {
+                            MyMessage.Show("Что-то пошло не так");
+                        }
+
                     }
 
                 }
