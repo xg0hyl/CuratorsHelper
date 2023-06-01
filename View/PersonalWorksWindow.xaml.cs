@@ -44,7 +44,7 @@ namespace CuratorsHelper.View
             }
             else
             {
-                MainText.Text += " родителеми";
+                MainText.Text += " родителями";
                 UpdateParentsWork();
             }
         }

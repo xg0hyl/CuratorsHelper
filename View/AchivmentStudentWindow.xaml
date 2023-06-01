@@ -229,7 +229,7 @@
             <TextBlock 
                 Grid.Row="3"
                 Grid.Column="2"
-                Text="Форма поорщения"
+                Text="Форма поощрения"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 FontSize="30"

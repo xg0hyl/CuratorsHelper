@@ -56,7 +56,6 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="30"/>
                         <RowDefinition/>
-                        <RowDefinition/>
                     </Grid.RowDefinitions>
 
                     <Grid
@@ -72,6 +71,11 @@
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"/>
 
+                    <StackPanel
+                        Grid.Row="1"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+                        
                     <Button
                         Grid.Row="1"
                         Width="150"
@@ -79,6 +83,7 @@
                         Name="ChangeBtn"
                         Style="{StaticResource ButtonStyle2}"
                         Height="30"
+                        Margin="0 0 0 10"
                         Content="Изменить данные"
                         Click="ChangeBtn_Click"/>
 
@@ -91,6 +96,9 @@
                         Height="30"
                         Content="Добавить данные"
                         Click="AddBtn_Click"/>
+                        
+                    </StackPanel>
+                    
 
 
 

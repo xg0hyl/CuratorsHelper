@@ -615,9 +615,6 @@ namespace CuratorsHelper.View
 
                     if (PassportWin.ShowDialog() == true)
                     {
-                        accept[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
-                        cancel[Array.IndexOf(edit, (sender as Image))].Visibility = Visibility.Visible;
-                        (sender as Image).Visibility = Visibility.Hidden;
                         SaveText = PassportText.Text;
 
                         selectPass = Passport_Modal.GetPass();
@@ -625,6 +622,19 @@ namespace CuratorsHelper.View
                         if (selectPass.date_issue != null)
                             datePassport = (DateTime)selectPass.date_issue;
                         PassportText.Text = selectPass.num_passport + ", " + selectPass.person_issue + ", " + datePassport.Date.ToString("dd.MM.yyyy");
+
+
+                        if (PassHand) CuratorsHelperEntities.GetContext().Passport.Add(selectPass);
+                        else CuratorsHelperEntities.GetContext().Entry(selectPass).State = System.Data.Entity.EntityState.Modified;
+
+                        try
+                        {
+                            CuratorsHelperEntities.GetContext().SaveChanges();
+                        }
+                        catch
+                        {
+                            MyMessage.Show("Что-то пошло не так");
+                        }
                     }
 
 
@@ -643,7 +653,6 @@ namespace CuratorsHelper.View
 
                     if (ParentsWin.ShowDialog() == true)
                     {
-                        (sender as Image).Visibility = Visibility.Hidden;
                         if ((sender as Image).Name == "Mother_edit")
                             SaveText = MotherText.Text;
                         if ((sender as Image).Name == "Father_edit")
@@ -676,7 +685,7 @@ namespace CuratorsHelper.View
                         else
                         {
                             CuratorsHelperEntities.GetContext().Parents.Remove(selectParent);
-                            tb[Array.IndexOf(accept, (sender as Image))].Clear();
+                            tb[Array.IndexOf(edit, (sender as Image))].Clear();
                         }
                         try
                         {
@@ -698,7 +707,6 @@ namespace CuratorsHelper.View
                     
                     if (otherParents.ShowDialog() == true)
                     {
-                        (sender as Image).Visibility = Visibility.Hidden;
                         SaveText = Sisters.Text;
                         SaveText2 = Brothers.Text;
 

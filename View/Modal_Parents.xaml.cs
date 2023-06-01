@@ -46,6 +46,13 @@ namespace CuratorsHelper.View
             listPar = listPar.Where(p => p.id_student == id).ToList();
             if (listPar.Count == 0)
                 ChangeBtn.Visibility = Visibility.Hidden;
+            foreach (var item in listPar)
+            {
+                if (item.parent == "Опекун" || listPar.Count == 2)
+                {
+                    AddBtn.Visibility = Visibility.Hidden;
+                }
+            }
         }
 
         private void CancelBtn_Click(object sender, RoutedEventArgs e)

@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CuratorsHelper.exe" size="784352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CuratorsHelper.exe" size="784864">
       <assemblyIdentity name="CuratorsHelper" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>D3X7PyLdrb5ZAGS11gBTdZwPZTL/TTNYJr52UhLjWTw=</dsig:DigestValue>
+        <dsig:DigestValue>nPDCu3TUJyWdERrMrTTvOe5g8V1gDJxixW0e1219mWI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

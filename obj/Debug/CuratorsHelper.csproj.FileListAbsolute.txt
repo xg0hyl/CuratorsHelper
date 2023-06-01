@@ -189,7 +189,6 @@ C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.xml
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\MimeKit.dll.config
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Newtonsoft.Json.xml
-C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.AssemblyReference.cache
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Memory.dll
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\System.Memory.xml
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\bin\Debug\Google.Apis.Drive.v3.dll
@@ -216,3 +215,4 @@ C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\ReportPrint.baml
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AdminPanel\AdminMain.g.cs
 C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\View\AdminPanel\AdminMain.baml
+C:\Users\danii\OneDrive\Рабочий стол\ДИПЛОМ\CuratorsHelper\obj\Debug\CuratorsHelper.csproj.AssemblyReference.cache
