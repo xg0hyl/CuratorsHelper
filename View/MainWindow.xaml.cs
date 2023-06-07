@@ -82,83 +82,73 @@ namespace CuratorsHelper
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            bool hand = false;
-            if (!string.IsNullOrEmpty(textLogin.Text) || !string.IsNullOrEmpty(textPass.Text))
+            try
             {
-                if (textLogin.Text == "admin" && textPass.Text == "qwerty")
+                bool hand = false;
+                if (!string.IsNullOrEmpty(textLogin.Text) || !string.IsNullOrEmpty(textPass.Text))
                 {
-                    Window adm = new View.AdminPanel.AdminMain();
-                    adm.Show();
-                    Close();
-                    return;
-                }
-                var currentPass = CuratorsHelperEntities.GetContext().Passwords.ToList();
-                int id = 0;
-                string checkPass = "";
-                byte[] checkSalt;
-                currentPass = currentPass.Where(p => p.login.Contains(textLogin.Text)).ToList();
-                if (currentPass.Count != 0)
-                {
-                    foreach (var item in currentPass)
+                    if (textLogin.Text == "admin" && textPass.Text == "qwerty")
                     {
-                        if (ArgonClass.HashPassword(textPass.Text, item.salt) == item.password && textLogin.Text == item.login)
+                        Window adm = new View.AdminPanel.AdminMain();
+                        adm.Show();
+                        Close();
+                        return;
+                    }
+                    var currentPass = CuratorsHelperEntities.GetContext().Passwords.ToList();
+                    int id = 0;
+                    string checkPass = "";
+                    byte[] checkSalt;
+                    currentPass = currentPass.Where(p => p.login.Contains(textLogin.Text)).ToList();
+                    if (currentPass.Count != 0)
+                    {
+                        foreach (var item in currentPass)
                         {
-                            hand = true;
-                            checkPass = item.password;
-                            checkSalt = item.salt;
-                            id = item.id_num;
+                            if (ArgonClass.HashPassword(textPass.Text, item.salt) == item.password && textLogin.Text == item.login)
+                            {
+                                hand = true;
+                                checkPass = item.password;
+                                checkSalt = item.salt;
+                                id = item.id_num;
+                            }
                         }
                     }
-                }
 
-                if (hand)
-                {
-                    if (rememberMe.IsChecked == true)
+                    if (hand)
                     {
-                        using (StreamWriter writer = new StreamWriter(path, false))
+                        if (rememberMe.IsChecked == true)
                         {
-                            writer.WriteLineAsync(textLogin.Text + "\n" + checkPass + "\n" + id);
+                            using (StreamWriter writer = new StreamWriter(path, false))
+                            {
+                                writer.WriteLineAsync(textLogin.Text + "\n" + checkPass + "\n" + id);
+                            }
                         }
+                        UserId.ID = id;
+                        var currentRuk = CuratorsHelperEntities.GetContext().rukovodstvo.ToList();
+                        rukovodstvo ruk = new rukovodstvo();
+
+
+                        foreach (var item in currentRuk)
+                            if (item.id_pass == UserId.ID)
+                            {
+                                UserId.Role = item.roles.name;
+                                break;
+                            }
+                            else UserId.Role = null;
+
+                        Window main = new MainMenuCurators();
+                        main.Show();
+                        this.Close();
                     }
-                    UserId.ID = id;
-                    var currentRuk = CuratorsHelperEntities.GetContext().rukovodstvo.ToList();
-                    rukovodstvo ruk = new rukovodstvo();
-
-
-                    foreach (var item in currentRuk)
-                        if (item.id_pass == UserId.ID)
-                        {
-                            UserId.Role = item.roles.name;
-                            break;
-                        }
-                        else UserId.Role = null;
-
-                    Window main = new MainMenuCurators();
-                    main.Show();
-                    this.Close();
+                    else MyMessage.Show("Неверный логин или пароль");
                 }
-                else MyMessage.Show("Неверный логин или пароль");
+                else MyMessage.Show("Заполните все поля");
+
             }
-            else MyMessage.Show("Заполните все поля");
-
-            /*
-                        Passwords pass = new Passwords();
-                        string BPass;
-                        byte[] salt;
-                        salt = ArgonClass.CreateSalt();
-                        BPass = ArgonClass.HashPassword(textPass.Text, salt);
-                        pass.salt = salt;
-                        pass.password = BPass;
-                        pass.login = textLogin.Text;
-                        CuratorsHelperEntities.GetContext().Passwords.Add(pass);
-                        try
-                        {
-                            CuratorsHelperEntities.GetContext().SaveChanges();
-                        }
-                        catch
-                        {
-                            MyMessage.Show("not added");
-                        }*/
+            catch (Exception msg)
+            {
+                MyMessage.Show("Что-то пошло не так");
+            }
+           
         }
 
         private void collapseWindow_Click(object sender, RoutedEventArgs e)

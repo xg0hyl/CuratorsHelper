@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nPDCu3TUJyWdERrMrTTvOe5g8V1gDJxixW0e1219mWI=</dsig:DigestValue>
+        <dsig:DigestValue>U2Q1kZrmp+xuRCCeJhCqpM7aK7EuynP52GhYOrXVBYg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -257,13 +257,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="CuratorsHelper.exe.config" size="2212">
+  <file name="CuratorsHelper.exe.config" size="2193">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>qJjX2ZQnb+qBAA98uSyPEQn/DXkJ94BZ5u/qIrfKFD8=</dsig:DigestValue>
+      <dsig:DigestValue>uJNTwQBaLT80kiq6ougI+kfuncokI/8EU87z4kpSp7k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Model1.Context.tt" size="22930">

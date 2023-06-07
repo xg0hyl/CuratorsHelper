@@ -203,7 +203,7 @@
             <Grid
                 Margin="30"
             Name="CuratorsGrid"
-            Visibility="Hidden">
+            Visibility="Visible">
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.1*"/>

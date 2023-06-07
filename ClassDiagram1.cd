@@ -1,2 +1,452 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CuratorsHelper.UserId">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAEAAAABAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.App">
+    <Position X="20" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.ArgonClass">
+    <Position X="14.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>ArgonClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.ConverterImage" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConverterImage.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.MaskPhone">
+    <Position X="16.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>MaskPhone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.CuratorsHelperEntities">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABIBBAFEAAABgCAFAAEAAAAABiECkAUAAIBAA=</HashCode>
+      <FileName>Model1.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Achivment_student">
+    <Position X="28.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAAAEAAAAAAAAAAAAAAAAAACgAAAQAAAAA=</HashCode>
+      <FileName>Achivment_student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Brothers_sisters">
+    <Position X="28.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAAAAEAAAAAAAEAAAAAAgAAAAgAAAAAAAAE=</HashCode>
+      <FileName>Brothers_sisters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Curators">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAAIBBAAAAgAAAAAAABAAAAICJgAAAAAQAAAAE=</HashCode>
+      <FileName>Curators.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.cyclics">
+    <Position X="14.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAgAAAAAAAAAAQBAAAEAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>cyclics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Facts_assotial">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAEAABAAAEAAAAAAAAAAAAgAAAQAAAAA=</HashCode>
+      <FileName>Facts_assotial.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Groups">
+    <Position X="28.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAhAAAAkEAABAAAAAAAAAAEIAAAAAEQAAAABAA=</HashCode>
+      <FileName>Groups.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Hobbies">
+    <Position X="9.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAIAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Hobbies.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Hostel">
+    <Position X="21.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAQAAAAAAAAggAAACAAAAA=</HashCode>
+      <FileName>Hostel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Mounth">
+    <Position X="23.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAACADAA=</HashCode>
+      <FileName>Mounth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Parents">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAACAEBAAAAAAAIAAAAAAAAoAgAEAAAAAAE=</HashCode>
+      <FileName>Parents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Passport">
+    <Position X="2.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEgEAAAAAAAAAAAAAAAAAgAAAAAAggA=</HashCode>
+      <FileName>Passport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Passwords">
+    <Position X="21.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABQAAAEAAAAAAAAEAAAAAAAAAAAAAAAgAAEAA=</HashCode>
+      <FileName>Passwords.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Plan_work">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEABAAAAAAAQAAAAAAAgAAAQKAAAAAgIAQAAAAA=</HashCode>
+      <FileName>Plan_work.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Report">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgEABAAAAAAACAAAAAAAgAAAQIAIAAAAIAQAAAAA=</HashCode>
+      <FileName>Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.roles">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEACAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>roles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.rukovodstvo">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAgIAAAAACAAAACAAAAAAAAAAogAAAAAQAAAAA=</HashCode>
+      <FileName>rukovodstvo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.student">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAAIBAAAIAAABgAAFAABAAAIAEoEgAAQEAIAA0=</HashCode>
+      <FileName>student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Student_Hobbies">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAEAAAAAAAMAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Student_Hobbies.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.sysdiagrams">
+    <Position X="28.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAIAAAAAAAAAAAAAAAQAAAFAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>sysdiagrams.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Type_plan_work">
+    <Position X="13" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAECAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Type_plan_work.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.WebSites">
+    <Position X="21.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABABAAAAAAAIAAAAAAAAAIAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>WebSites.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Works_parent">
+    <Position X="16.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAEAABAgAAEAAAAAAAAAAAgAAAQAAAAA=</HashCode>
+      <FileName>Works_parent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Works_student">
+    <Position X="18.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAABAgAAEAAAAAAAAAAAgAAAQAAAAA=</HashCode>
+      <FileName>Works_student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.MyMessage" BaseTypeListCollapsed="true">
+    <Position X="11" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEIACAAAAAAAAAAAA=</HashCode>
+      <FileName>MyMessage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.CloudPage" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEAAAAAAACCIAgAAAAAAAAAACAAEAAAAAgAAA=</HashCode>
+      <FileName>View\CloudPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.GroupsPage" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>View\GroupsPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.MainMenuCurators" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CYgAARAEECQAAQYEGBAAEAWgAAAA4AAAAAAIAABAAAw=</HashCode>
+      <FileName>View\MainMenuCurators.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.MainWindow" BaseTypeListCollapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAEAAAAAAoAABAAAACAAAAAA=</HashCode>
+      <FileName>View\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.Modal_Hobbies" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAQAAAAAAAAAAAAECAAAAACAEAAAgE=</HashCode>
+      <FileName>View\Modal_Hobbies.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.ProfilePage" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAABABAAAAAAAAAAAAAAAAAAAQAAAAACAA=</HashCode>
+      <FileName>View\ProfilePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.ViberPage" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQgQAECAAIBINIRIgABkkQpQMgCDCASBAOAgAxIAA=</HashCode>
+      <FileName>View\ViberPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.Properties.Resources">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.Properties.Settings">
+    <Position X="16.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CuratorsHelper.View.AchivmentPrint" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAgAA=</HashCode>
+      <FileName>View\AchivmentPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.AchivmentStudentWindow" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAAAAJgAAAAEAoAAAAAAAAAUAggA=</HashCode>
+      <FileName>View\AchivmentStudentWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.AssotialPrint" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAgAA=</HashCode>
+      <FileName>View\AssotialPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.AssotialStudentWindow" BaseTypeListCollapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAAAABgAAAAEAoAEAAAABAAEAggA=</HashCode>
+      <FileName>View\AssotialStudentWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ChangePlan" BaseTypeListCollapsed="true">
+    <Position X="25.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAgAAAEAAAACAgAoAAAAAAAAAAAIAA=</HashCode>
+      <FileName>View\ChangePlan.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.Modal_OtherFamily" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACEAABEAAAAAAAYCAAAAAAAAAABIACAgEAAAEAAAgE=</HashCode>
+      <FileName>View\Modal_OtherFamily.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.Modal_Parents" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAAABGAQAAQAAYAAAAAAAAAAAAIACCgAAAAEQAAgE=</HashCode>
+      <FileName>View\Modal_Parents.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ModalAccept" BaseTypeListCollapsed="true">
+    <Position X="27" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ModalAccept.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ModalSettings" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>View\ModalSettings.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.Passport_Modal" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAUAAAAAAAAAAAAAACEAAAAAAAAAgE=</HashCode>
+      <FileName>View\Passport_Modal.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.PersonalWorksWindow" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAgEAJBAAAAgAAAABgAAAAEAoAAAAAAAAAEAggA=</HashCode>
+      <FileName>View\PersonalWorksWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.PlanPrint" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAgAA=</HashCode>
+      <FileName>View\PlanPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.PrintPanel" BaseTypeListCollapsed="true">
+    <Position X="20" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAGAAAAAAAAABAAAAAAAAAAoAAAAAAAAAAAggA=</HashCode>
+      <FileName>View\PrintPanel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ProfileSettings" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAIEAAAAEAVAAAAAAAAAgBAAoAAAAAQAAAAAgAA=</HashCode>
+      <FileName>View\ProfileSettings.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ReportPlan" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEgAAEAAAAAAAgAAAABgAAgAkAoAAAAAAAAAAAgAA=</HashCode>
+      <FileName>View\ReportPlan.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.ReportPrint" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAgAA=</HashCode>
+      <FileName>View\ReportPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.StudentAddModalQuest" BaseTypeListCollapsed="true">
+    <Position X="18.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>View\StudentAddModalQuest.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.StudentsWindow" BaseTypeListCollapsed="true">
+    <Position X="27" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gGBQAgyGAABLBBIEUAAAQgUQIIAAoAGEACAAQgTAhgA=</HashCode>
+      <FileName>View\StudentsWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.StudentWorkPrint" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAJAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAggA=</HashCode>
+      <FileName>View\StudentWorkPrint.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.View.AdminPanel.AdminMain" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>WCQQggAuBAACRIogRAgSBgAIEEEEoBABEIgQgEAQkAA=</HashCode>
+      <FileName>View\AdminPanel\AdminMain.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CuratorsHelper.viewOther.GroupsPsyho" BaseTypeListCollapsed="true">
+    <Position X="13" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>viewOther\GroupsPsyho.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
